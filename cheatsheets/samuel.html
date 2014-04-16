@@ -1,0 +1,60 @@
+<div id="firephp">
+	<h3>Personal Cheatsheet</h3>
+
+	<div>
+		<article id="page2">
+			<div class="inner">
+				<header><h4>Primary Functions</h4></header>
+				<dl>
+					<dd>Initialize FirePHP</dd>
+					<dt><pre>
+						require_once('FirePHPCore/FirePHP.class.php');
+						ob_start();
+						$firephp = FirePHP::getInstance(true);</pre></dt>
+					<dd>Log to FirePHP</dd>
+					<dt><code>$firephp->log('Test');</code></dt>
+					<dd>Disable FirePHP</dd>
+					<dt><code>$firephp->setEnabled(false);</code></dt>
+
+				</dl>
+			</div>
+		</article>
+	</div>
+	<div>
+		<article id="page3">
+			<div class="inner">
+				<header><h4>Error Handling</h4></header>
+				<dl>
+					<dt><pre>	$firephp->registerErrorHandler($throwErrorExceptions=false);
+								$firephp->registerExceptionHandler();
+								$firephp->registerAssertionHandler(
+            						$convertAssertionErrorsToExceptions=true,
+            						$throwAssertionExceptions=false);
+								try {
+								  throw new Exception('Test Exception');
+								} catch(Exception $e) {
+								  $firephp->error($e);  // or FB::
+								}</pre></dt>
+				</dl>
+			</div>
+		</article>
+	</div>
+	<div>
+		<article id="page3">
+			<div class="inner">
+				<header><h4>Krumo</h4></header>
+				<dl>
+					<dd>Initialize Krumo</dd>
+					<dt><pre>
+						require_once('class.krumo.php');</pre></dt>
+					<dd>Log to FirePHP</dd>
+					<dt><code>$firephp->log('Test');</code></dt>
+					<dd>Disable FirePHP</dd>
+					<dt><code>$firephp->setEnabled(false);</code></dt>
+
+				</dl>
+			</div>
+		</article>
+	</div>
+	<hr>
+<p>Adapted from the <a href="http://www.firephp.org/HQ/Use.htm" target="_top">FirePHP reference</a></p>
